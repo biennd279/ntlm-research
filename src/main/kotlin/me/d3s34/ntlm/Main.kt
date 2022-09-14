@@ -1,14 +1,10 @@
 package me.d3s34.ntlm
 
-import me.d3s34.ntlm.utils.InputDataBuffer
+import me.d3s34.ntlm.utils.toByteArray
 
 fun main(args: Array<String>) {
-    val byteArray = byteArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8)
-    val inputDataBuffer = InputDataBuffer(byteArray)
+    val negotiateMessageParser = NegotiateMessageParser()
+    val negotiateString = "TlRMTVNTUAABAAAAMbCI4h4AHgAoAAAABAAEAEYAAAAGAbEdAAAAD2V4Y2hhbmdlc2VydmVyLnZjc2xhYmt2bS5sb2NhbEJJRU4="
 
-    println(inputDataBuffer.peek())
-    println(inputDataBuffer.nextByteOrNull())
-    println(inputDataBuffer.takeNext(3).toList())
-    println(inputDataBuffer.nextByteOrNull())
-    println(inputDataBuffer.takeNext(3).toList())
+    println(negotiateMessageParser.parseFromBase64(negotiateString))
 }

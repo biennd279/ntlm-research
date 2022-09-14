@@ -23,6 +23,12 @@ class InputDataBuffer(
 
         return byteArray.copyOfRange(index, index + next).also { index += next}
     }
+
+    fun takeFromBegin(offset: Int, len: Int): ByteArray {
+        require(len > 0) { "Number of bytes to take must be greater than 0!" }
+
+        return byteArray.copyOfRange(offset, offset + len)
+    }
 }
 
 class OutputDataBuffer: DataBuffer {
