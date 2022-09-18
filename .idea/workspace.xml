@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae39482-e339-41e6-859e-d73d7b36294d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/ChallengeMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/DomainNameField.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/NegotiateMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/NegotiatePayload.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/NtlmMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/WorkstationField.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NegotiateMessageParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NtlmParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/utils/ByteArrayUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/ChallengePayload.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/TargetInfoFields.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/TargetNameFields.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/ChallengeMessageParser.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/utils/DataBuffer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/utils/DataBuffer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/ChallengeMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/ChallengeMessage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/DomainNameField.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/DomainNameFields.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/NegotiateMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/NegotiateMessage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/WorkstationField.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/model/WorkstationFields.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NegotiateMessageParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NegotiateMessageParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NtlmParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/me/d3s34/ntlm/parser/NtlmParser.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +99,8 @@
       <workItem from="1663097828829" duration="3035000" />
       <workItem from="1663122507443" duration="2606000" />
       <workItem from="1663139524187" duration="4014000" />
+      <workItem from="1663209507579" duration="1638000" />
+      <workItem from="1663529129203" duration="744000" />
     </task>
     <servers />
   </component>

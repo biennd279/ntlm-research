@@ -1,9 +1,8 @@
-package me.d3s34.ntlm
+package me.d3s34.ntlm.parser
 
 import me.d3s34.ntlm.model.NegotiateMessage
 import me.d3s34.ntlm.model.NegotiatePayload
 import me.d3s34.ntlm.model.NtlmMessage
-import me.d3s34.ntlm.parser.NtlmParser
 import me.d3s34.ntlm.utils.InputDataBuffer
 import me.d3s34.ntlm.utils.toInt
 import me.d3s34.ntlm.utils.toLong
@@ -17,7 +16,7 @@ class NegotiateMessageParser(
 
         require(messageType == MessageType.NEGOTIATE.value)
 
-        val negotiateFlags = dataBuffer.takeNext(4).toLong(littleEndian = true)
+        val negotiateFlags = dataBuffer.takeNext(4).toInt(littleEndian = true)
         val domainNameFields = parseDomainFields(dataBuffer.takeNext(8))
         val workstationFields = parseWorkstationFields(dataBuffer.takeNext(8))
         val version = if (hasVersion(negotiateFlags)) dataBuffer.takeNext(8).toLong(littleEndian = true) else 0
@@ -40,17 +39,13 @@ class NegotiateMessageParser(
             signature = signature,
             messageType = messageType,
             negotiateFlags = negotiateFlags,
-            domainNameField = domainNameFields,
-            workstationField = workstationFields,
+            domainNameFields = domainNameFields,
+            workstationFields = workstationFields,
             version = version,
             payload = NegotiatePayload(
                 domainName = domainName,
                 workstationName = workstationName
             )
         )
-    }
-
-    private fun hasVersion(flags: Long): Boolean {
-        return flags and 1L.shl(63 - 6) != 0L
     }
 }
